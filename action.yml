@@ -1,0 +1,16 @@
+name: "moc"
+description: "A GitHub Action to list your opensource contributions in a README"
+author: "Bhupesh Varshney"
+inputs:
+  username:
+    description: "Your Github username"
+    required: true
+outputs:
+  modifiedFiles:
+    description: "The modified README.md with latest contributions"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: 'git-pull-request'
+  color: 'green'
