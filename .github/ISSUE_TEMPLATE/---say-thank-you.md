@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-if you liked **memer-action** - please let us know. We'd love to hear from you!
+if you liked **moc** - please let us know. We'd love to hear from you!
 
 You can help me in any way possible
 

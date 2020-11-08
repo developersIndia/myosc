@@ -84,7 +84,6 @@ def generate_report(repos, prs):
         with open(f"{user}-pull-requests.md", "w") as file:
             file.write(DEFAULT_HEADER)
 
-
     with open(f"{user}-pull-requests.md", "a+") as file:
         file.write("\n<ol>")
         for pr in prs:
@@ -109,7 +108,6 @@ def generate_report(repos, prs):
     else:
         with open(f"{user}-pull-requests.md", "a+") as file:
             file.write(DEFAULT_FOOTER)
-
 
     print(f"Saving context in {user}-pull-requests.md ✅")
 
