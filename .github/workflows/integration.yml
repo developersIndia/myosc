@@ -5,12 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Self test
+      - name: Self Test 👀
         id: selftest
         uses: Bhupesh-V/moc@main
         with:
           username: "${{ github.actor }}"
-      - name: Commit files
+          filename: "my-prs.md"
+      - name: Commit files ✅
         run: |
           git config --local user.name  ${{ github.actor }}
           git add .

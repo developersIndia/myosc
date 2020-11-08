@@ -5,9 +5,12 @@ inputs:
   username:
     description: "Your Github username"
     required: true
+  filename:
+    description: "Name of file to output contribution"
+    required: false
 outputs:
   modifiedFiles:
-    description: "The modified README.md with latest contributions"
+    description: "The new/modified README.md with latest contributions"
 runs:
   using: "docker"
   image: "Dockerfile"

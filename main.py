@@ -71,20 +71,20 @@ def get_user_prs(username):
     return pull_requests
 
 
-def generate_report(repos, prs):
+def generate_report(repos, prs, filename):
     header = pathlib.Path("header.md")
     footer = pathlib.Path("footer.md")
 
     if header.exists():
-        with open(f"{user}-pull-requests.md", "w") as file:
+        with open(filename, "w") as file:
             header_file = open("header.md", "r")
             file.write(header_file.read())
             header_file.close()
     else:
-        with open(f"{user}-pull-requests.md", "w") as file:
+        with open(filename, "w") as file:
             file.write(DEFAULT_HEADER)
 
-    with open(f"{user}-pull-requests.md", "a+") as file:
+    with open(filename, "a+") as file:
         file.write("\n<ol>")
         for pr in prs:
             if pr["repository_url"] not in repos:
@@ -101,12 +101,12 @@ def generate_report(repos, prs):
         file.write("</ol>\n\n")
 
     if footer.exists():
-        with open(f"{user}-pull-requests.md", "a+") as file:
+        with open(filename, "a+") as file:
             footer_file = open("footer.md", "r")
             file.write(footer_file.read())
             footer_file.close()
     else:
-        with open(f"{user}-pull-requests.md", "a+") as file:
+        with open(filename, "a+") as file:
             file.write(DEFAULT_FOOTER)
 
     print(f"Saving context in {user}-pull-requests.md ✅")
@@ -118,6 +118,11 @@ if __name__ == "__main__":
     except KeyError as e:
         print("moc needs a github username")
         exit()
+    try:
+        filename = os.environ["INPUT_FILENAME"]
+    except KeyError as e:
+        filename = "README.md"
+        pass
     # if len(sys.argv) != 2:
     #     print("Needs a github username as an argument")
     #     exit()
@@ -125,4 +130,4 @@ if __name__ == "__main__":
     #     user = sys.argv[1]
     user_repos = get_user_repos(user)
     user_prs = get_user_prs(user)
-    generate_report(user_repos, user_prs)
+    generate_report(user_repos, user_prs, filename)
