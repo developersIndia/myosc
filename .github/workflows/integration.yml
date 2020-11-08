@@ -10,3 +10,13 @@ jobs:
         uses: Bhupesh-V/moc@main
         with:
           username: "${{ github.actor }}"
+      - name: Commit files
+        run: |
+          git config --local user.name  ${{ github.actor }}
+          git add .
+          git commit -m "Automated Commit: generate contributions file"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
