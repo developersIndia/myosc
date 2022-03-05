@@ -1,6 +1,6 @@
 name: "moc"
 description: "A GitHub Action to list your opensource contributions in a README"
-author: "Bhupesh Varshney"
+author: "developersIndia"
 inputs:
   username:
     description: "Your Github username"
