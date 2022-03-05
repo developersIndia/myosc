@@ -1,4 +1,4 @@
-name: "moc"
+name: "myosc"
 description: "A GitHub Action to list your opensource contributions in a README"
 author: "developersIndia"
 inputs:
