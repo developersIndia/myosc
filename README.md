@@ -4,9 +4,12 @@
   </p>
 </p>
 
-## Demo
+[![Integration Test](https://github.com/developersIndia/moc/actions/workflows/integration.yml/badge.svg?branch=main)](https://github.com/developersIndia/moc/actions/workflows/integration.yml) ![GitHub](https://img.shields.io/github/license/developersIndia/moc?color=%23848484&label=License&logo=GitHub) ![Discord](https://img.shields.io/discord/669880381649977354?color=%237289da&label=Discord&logo=Discord) ![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/developersIndia?style=social)
 
-[**Here is my list of contributions**](https://github.com/Bhupesh-V/my-contributions)
+## Folk's using `moc`
+
+- [**`Bhupesh-V's` list of contributions**](https://github.com/Bhupesh-V/my-contributions)
+- [`+ Add yourself`](https://github.com/developersIndia/moc/pulls)
 
 
 ## ❓ Usage
@@ -33,7 +36,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Generate My PRs List 👀
-      uses: Bhupesh-V/moc@main
+      uses: developersIndia/moc@main
       with:
         username: "${{ github.actor }}"
         filename: "README.md"
@@ -46,24 +49,6 @@ moc accepts following input variables.
 - `username` (required) : Your github username.
 - `filename` (optional) : A filename for the new markdown file, defaults to README.md
 
-
-## Author [![bhupesh-twitter-image](https://kutt.it/bhupeshimself)](https://twitter.com/bhupeshimself)
-
-👤 **[Bhupesh Varshney](https://bhupesh-v.github.io)** 
-
-## ☺️ Show your support
-
-Support me by giving a ⭐️ if this project helped you! or just [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FBhupesh-V%2Ftil%2F)](https://twitter.com/intent/tweet?url=https://github.com/Bhupesh-V/til&text=til%20via%20@bhupeshimself)
-
-<a href="https://liberapay.com/bhupesh/donate">
-  <img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" width="100">
-</a>
-<a href="https://ko-fi.com/bhupesh">
-  <img title="ko-fi/bhupesh" alt="Support on ko-fi" src="https://user-images.githubusercontent.com/34342551/88784787-12507980-d1ae-11ea-82fe-f55753340168.png" width="185">
-</a>
-
-
 ## 📝 License
 
-Copyright © 2020 [Bhupesh Varshney](https://github.com/Bhupesh-V).<br />
 This project is [GPLV3](https://github.com/Bhupesh-V/memer-action/blob/master/LICENSE) licensed.
