@@ -4,43 +4,39 @@
   </p>
 </p>
 
+## Demo
+
+[**Here is my list of contributions**](https://github.com/Bhupesh-V/my-contributions)
+
 
 ## ❓ Usage
 
 ### Example workflow
 
-- You can use the following workflow as it is, just copy/paste in a file named `my-contributions.yml` inside your [workflows](https://github.com/Bhupesh-V/moc/tree/main/.github/workflows) folder.
-- You can manually trigger builds but the recommended way is to add cron build.
-- The push action is performed by [ad-m/github-push-action](https://github.com/ad-m/github-push-action)
+- You can use the following workflow as it is, just copy/paste in a file named `my-contributions.yml` inside your workflows directory.
+- You can manually trigger builds but the recommended way is to schedule the build using cron.
+<!-- - The push action is performed by [ad-m/github-push-action](https://github.com/ad-m/github-push-action) -->
 
 ```yaml
-name: My Contributions
+name: Build Contributions List
 
-on: [push]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+  # run once every month
+    - cron:  '0 0 1 * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Self Test 👀
-        id: selftest
-        uses: Bhupesh-V/moc@main
-        with:
-          username: "${{ github.actor }}"
-          filename: "my-prs.md"
-      - name: Commit files ✅
-        run: |
-          git config --local user.name  ${{ github.actor }}
-          git add .
-          git commit -m "Automated Commit: generate contributions file"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
-
+    - uses: actions/checkout@v2
+    - name: Generate My PRs List 👀
+      uses: Bhupesh-V/moc@main
+      with:
+        username: "${{ github.actor }}"
+        filename: "README.md"
 ```
 
 ### Inputs
