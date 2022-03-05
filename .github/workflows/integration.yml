@@ -13,14 +13,14 @@ jobs:
         with:
           username: "${{ github.actor }}"
           filename: "my-prs.md"
-      - name: Commit files ✅
-        run: |
-          git config --local user.name  ${{ github.actor }}
-          git add .
-          git commit -m "Automated Commit: generate contributions file"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
+#       - name: Commit files ✅
+#         run: |
+#           git config --local user.name  ${{ github.actor }}
+#           git add .
+#           git commit -m "Automated Commit: generate contributions file"
+#       - name: Push changes
+#         uses: ad-m/github-push-action@master
+#         with:
+#           branch: main
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           force: true
