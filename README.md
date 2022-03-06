@@ -1,20 +1,27 @@
+<h1 align="center">myosc</h1>
 <p align="center">
+  Flex your open-source contributions like a pro 🤟🏽 <br>
+  A github action to list all your pull requests in a markdown file
+</p>
+
+<!-- <p align="center">
   <p align="center">
   <a href=""><img src="https://github.com/Bhupesh-V/moc/blob/main/assets/logo.png?raw=true" alt="moc-action-logo" height="400px"></a>
   </p>
+</p> -->
+
+<p align="center">
+  <p align="center">
+  <a href="https://github.com/developersIndia/myosc/actions/workflows/integration.yml"><img src="https://github.com/developersIndia/myosc/actions/workflows/integration.yml/badge.svg?branch=main"></a>
+    <a href=""><img src="https://img.shields.io/github/license/developersIndia/myosc?color=orange&label=License&logo=GitHub"></a>
+    <a href="https://discord.gg/MKXMSNC"><img src="https://img.shields.io/discord/669880381649977354?color=%237289da&label=Discord&logo=Discord"></a>
+    <a href="https://www.reddit.com/r/developersIndia/"><img src="https://img.shields.io/reddit/subreddit-subscribers/developersIndia?style=social"></a>
+  </p>
 </p>
 
-[![Integration Test](https://github.com/developersIndia/moc/actions/workflows/integration.yml/badge.svg?branch=main)](https://github.com/developersIndia/moc/actions/workflows/integration.yml) ![GitHub](https://img.shields.io/github/license/developersIndia/moc?color=%23848484&label=License&logo=GitHub) ![Discord](https://img.shields.io/discord/669880381649977354?color=%237289da&label=Discord&logo=Discord) ![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/developersIndia?style=social)
-
-## Folk's using `moc`
-
-- [**`Bhupesh-V's` list of contributions**](https://github.com/Bhupesh-V/my-contributions)
-- [`+ Add yourself`](https://github.com/developersIndia/moc/pulls)
 
 
 ## ❓ Usage
-
-### Example workflow
 
 - You can use the following workflow as it is, just copy/paste in a file named `my-contributions.yml` inside your workflows directory.
 - You can manually trigger builds but the recommended way is to schedule the build using cron.
@@ -36,7 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Generate My PRs List 👀
-      uses: developersIndia/moc@main
+      uses: developersIndia/myosc@main
       with:
         username: "${{ github.actor }}"
         filename: "README.md"
@@ -44,10 +51,15 @@ jobs:
 
 ### Inputs
 
-moc accepts following input variables.
+myosc accepts following input variables.
 
 - `username` (required) : Your github username.
 - `filename` (optional) : A filename for the new markdown file, defaults to README.md
+
+## Folk's using `myosc`
+
+- [**`Bhupesh-V's` list of contributions**](https://github.com/Bhupesh-V/my-contributions)
+- [`+ Add yourself`](https://github.com/developersIndia/myosc/pulls)
 
 ## 📝 License
 
