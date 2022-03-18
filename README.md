@@ -28,7 +28,7 @@
 <!-- - The push action is performed by [ad-m/github-push-action](https://github.com/ad-m/github-push-action) -->
 
 ```yaml
-name: Build Contributions List
+name: Build My Contributions List
 
 on:
   push:
@@ -49,17 +49,24 @@ jobs:
         filename: "README.md"
 ```
 
+
 ### Inputs
 
-myosc accepts following input variables.
+`myosc` accepts following input variables.
 
 - `username` (required) : Your github username.
-- `filename` (optional) : A filename for the new markdown file, defaults to README.md
+- `filename` (optional) : A filename for the new markdown file where report will be added, defaults to README.md
 
-## Folk's using `myosc`
+### ✨ Customization
 
-- [**`Bhupesh-V's` list of contributions**](https://github.com/Bhupesh-V/my-contributions)
-- [`+ Add yourself`](https://github.com/developersIndia/myosc/pulls)
+`myosc` supports custom header and footers for the README report. You can leverage this to add custom badges, licenses or any other info before and after the report
+
+<img width="885" alt="Screenshot 2022-03-18 at 11 18 12 AM" src="https://user-images.githubusercontent.com/34342551/158944975-8e4ae9ec-ca32-44f6-8c5f-84cbf9419b4d.png">
+
+
+1. Create a file named `HEADER.md` if you want to append something before the report.
+2. Create a file named `FOOTER.md` if you want to append something after the report.
+
 
 ## 📝 License
 
