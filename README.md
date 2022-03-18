@@ -57,6 +57,11 @@ jobs:
 - `username` (required) : Your github username.
 - `filename` (optional) : A filename for the new markdown file where report will be added, defaults to README.md
 
+
+### Demos
+
+Check the [`my-prs.md`](https://github.com/developersIndia/myosc/blob/main/my-prs.md) file to see how the report looks like
+
 ### ✨ Customization
 
 `myosc` supports custom header and footers for the README report. You can leverage this to add custom badges, licenses or any other info before and after the report
